@@ -3,6 +3,7 @@ cmake_minimum_required(VERSION 2.8)
 PROJECT(skindemo)
 SET(havokinc $ENV{SNH_HOME}/hk2013_1_0_r1/Source)
 SET(ogreinc $ENV{OGRE_HOME}/include)
+SET(pocoinc $ENV{SNH_HOME}/poco/include)
 
 SET(havoklib 
 	$ENV{SNH_HOME}/hk2013_1_0_r1/Lib/win32_vs2010
@@ -11,6 +12,7 @@ SET(havoklib
 INCLUDE_DIRECTORIES(
 	${havokinc}
 	${ogreinc}
+	${pocoinc}
 	${CMAKE_SOURCE_DIR}/../include
 )
 
@@ -18,6 +20,7 @@ LINK_DIRECTORIES(
 	${havoklib}
 	$ENV{OGRE_HOME}/lib/release
 	$ENV{OGRE_HOME}/lib/release/opt
+	$ENV{SNH_HOME}/poco/lib
 )
 
 SET(source main.cpp
